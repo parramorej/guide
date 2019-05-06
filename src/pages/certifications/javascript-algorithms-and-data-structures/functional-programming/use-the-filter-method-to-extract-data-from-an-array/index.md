@@ -1,10 +1,23 @@
 ---
-title: Use the filter Method to Extract Data from an Array
+title: Use the filter method to extract data from an array
 ---
-## Use the filter Method to Extract Data from an Array
+## Use the filter method to extract data from an array
 
-This is a stub. <a href='https://github.com/freecodecamp/guides/tree/master/src/pages/certifications/javascript-algorithms-and-data-structures/functional-programming/use-the-filter-method-to-extract-data-from-an-array/index.md' target='_blank' rel='nofollow'>Help our community expand it</a>.
+## ![:speech_balloon:](https://forum.freecodecamp.com/images/emoji/emoji_one/speech_balloon.png?v=3 ":speech_balloon:") Hint: 1
+This challange is solved in 2 steps. 
+First, Array.prototype.filter is used to filter the array so it's left with elements that have imdbRating > 8.0. 
+After that, Array.prototype.map can be used to shape the output to the desired format.
 
-<a href='https://github.com/freecodecamp/guides/blob/master/README.md' target='_blank' rel='nofollow'>This quick style guide will help ensure your pull request gets accepted</a>.
+### Solution
 
-<!-- The article goes here, in GitHub-flavored Markdown. Feel free to add YouTube videos, images, and CodePen/JSBin embeds  -->
+```javascript
+
+// Add your code below this line
+
+var filteredList = watchList.map(function(e) {
+  return {title: e["Title"], rating: e["imdbRating"]}
+}).filter((e) => e.rating >= 8);
+
+console.log(filteredList); 
+
+```

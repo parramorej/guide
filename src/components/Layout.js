@@ -1,7 +1,6 @@
-/* global graphql */
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import FCCSearch from 'react-freecodecamp-search';
 import Col from 'react-bootstrap/lib/Col';
 import Grid from 'react-bootstrap/lib/Grid';
@@ -91,6 +90,7 @@ const Layout = ({ children }) => (
                   </div>
                   <FCCSearch />
                   <button
+                    aria-label='toggle navbar'
                     className='navbar-toggle'
                     onClick={toggleDisplaySideNav}
                     type='button'
